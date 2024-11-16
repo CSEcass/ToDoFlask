@@ -5,7 +5,7 @@ db = TinyDB('./db.json')
 app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def hello():
-    todoName = request.form.get('todo')
+    todoName = request.form.get('todoCre')
     if todoName == '':
         print('No Input.')
     else:

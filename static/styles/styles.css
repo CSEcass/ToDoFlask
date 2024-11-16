@@ -4,7 +4,7 @@ body{
     color: white;
     font-family: "Silkscreen", sans-serif;
     font-weight: 500;
-    font-style: normal
+    font-style: normal;
 }
 section {
     width: 900px;
@@ -34,11 +34,31 @@ ul {
     list-style-type: square;
 }
 li:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
+}
+#Blue {
+    color: blue;
+}
+#Green {
+    color: green;
 }
 button {
-    display: block;
-}
-form {
     display: inline-block;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+input {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+input:focus {
+    background-color: rgb(197, 197, 197);
+  }
+form {
 }
