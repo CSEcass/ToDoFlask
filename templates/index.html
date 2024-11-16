@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <title>Home Page</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to your To-Do-List!</h1>
+    </header>
+    <section>
+        <article style="float: left;">
+            <h2>Current To-Do-List:</h2>
+            <dl>
+                <dt>{{Name}}</dt>
+                <dd>{{Desc}}</dd>
+            </dl>
+        </article>
+        <article style="float: right;">
+            <h2>Edit To-Do-List:</h2>
+            <form id="form" action="{{url_for('hello')}}" method="post">
+                <input type="text" id="todo" placeholder="Enter Your Task" name="todo">
+                <button id="add" type="Submit">Add/Create</button>
+                <br>
+                <input type="text" id="todo" placeholder="Enter Your Task" name="Update">
+                <button id="add" type="Submit">Change/Update</button>
+                <br>
+                <input type="text" id="todo" placeholder="Enter Your Task" name="Delete">
+                <button id="add" type="Submit">Remove/Delete</button>
+            </form>
+        </article>
+    </section>
+</body>
+</html>

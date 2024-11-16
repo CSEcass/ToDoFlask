@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+body{
+    background-color: black;
+    color: white;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal
+}
+section {
+    width: 900px;
+    margin: auto;
+}
+header {
+    text-align: center;
+    background-color: gray;
+    width: 900px;
+    height: 100px;
+    line-height: 100px;
+    margin: auto;
+}
+article {
+    background-color: rgb(85, 85, 85);
+    height: 550px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+h2 { 
+    text-decoration: underline;
+    text-align: center;
+}
+ul {
+    list-style-type: square;
+}
+li:hover {
+    text-decoration: underline; 
+}
+button {
+    display: block;
+}
+form {
+    display: inline-block;
+}
