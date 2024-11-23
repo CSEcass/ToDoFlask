@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../static/styles/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/styles.css">
     <title>Home Page</title>
 </head>
 <body>
@@ -14,30 +14,42 @@
     <section>
         <article style="float: left;">
             <h2>Current To-Do-List:</h2>
-            <ul>
-                <li>Placeholder</li>
-                <ul>
-                    <li>Placeholder</li>
-                </ul>
-                <li>{{Name}}</li>
-                <ul>
-                    <li>{{Desc}}</li>
-                </ul>
-            </ul>
+            <ol>
+                <!--Add box arnd each todo(section li,dl,dd. NOT THE {}.)-->
+                {% for todo in todos %} 
+                    <li>Name : {{todo['Name']}}</li>
+                    <dl>
+                        <dd>Description : {{todo['Desc']}}</dd>
+                    </dl>
+                {% endfor %}
+            </ol>
         </article>
         <article style="float: right;">
             <h2>Edit To-Do-List:</h2>
-            <p>(NOTE: <span id="Blue">Blue Text = Uppercase</span>, <span id="Green">Green Text = Lowercase</span>)</p>
-
-            <form id="form" action="{{url_for('hello')}}" method="post">
-                <input type="text" id="todCre" placeholder="Enter Your Task" name="todo">
-                <button id="add" type="Submit">Add/Create</button>
+            <p>(NOTE: text is case sensitive.)</p>
+            <form id="form1" action="{{url_for('hello')}}" method="post">
+                <input required type="text" placeholder="Task Name" name="todoName">
                 <br>
-                <input type="text" id="todoUpd" placeholder="Enter Your Task" name="Update">
-                <button id="add" type="Submit">Change/Update</button>
+                <input required type="text" placeholder="Task Description" name="todoDesc">
                 <br>
-                <input type="text" id="todoDel" placeholder="Enter Your Task" name="Delete">
-                <button id="add" type="Submit">Remove/Delete</button>
+                <button id="add" type="Submit">Create</button>
+            </form>
+            <br>
+            <form id="form2" action="{{url_for('delete')}}" method="post">
+                <input required type="text" placeholder="Task Name" name="todoDel">
+                <br>
+                <button id="del" type="Submit">Delete</button>
+            </form>
+            <br>
+            <!--LAST FUNCTION TO FINISH!!!! VVVVV-->
+            <form id="form3" action="{{url_for('hello')}}" method="put">
+                <input required type="text" placeholder="Task Name" name="todoUpd">
+                <br>
+                <input required type="text" placeholder="NEW Name" name="updName">
+                <br>
+                <input required type="text" placeholder="NEW Description" name="updDesc">
+                <br>
+                <button id="add" type="Submit">Update</button>
             </form>
         </article>
     </section>

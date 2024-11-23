@@ -20,9 +20,9 @@ header {
 }
 article {
     background-color: rgb(85, 85, 85);
-    height: 550px;
-    width: 400px;
-    margin: 10px;
+    height: 550px ;
+    width: 400px ;
+    margin: 10px ;
     padding: 10px;
     overflow: auto;
 }
@@ -30,17 +30,12 @@ h2 {
     text-decoration: underline;
     text-align: center;
 }
-ul {
-    list-style-type: square;
+ol {
+    background-color: gray;
+    margin: 5px;
 }
-li:hover {
-    text-decoration: underline;
-}
-#Blue {
-    color: blue;
-}
-#Green {
-    color: green;
+dd {
+    color: rgb(200, 200, 200);
 }
 button {
     display: inline-block;
@@ -56,9 +51,14 @@ input {
     font-family: "Silkscreen", sans-serif;
     font-weight: 500;
     font-style: normal;
+    color: green;
 }
 input:focus {
+    outline: none;
     background-color: rgb(197, 197, 197);
   }
 form {
+    background-color: gray;
+    padding: 10px;
+    margin: 5px;
 }
