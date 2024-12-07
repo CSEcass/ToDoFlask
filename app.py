@@ -19,6 +19,15 @@ def delete():
         todoDel = request.form.get('todoDel')
         db.remove(todo.Name == todoDel)
     return redirect('/')
+@app.route('/upda', methods=['GET', 'POST'])
+def update():
+    if request.method == 'POST':
+        Name = request.form.get('todoUpd')
+        Newname = request.form.get('updName')
+        Newdesc = request.form.get('updDesc')
+        db.update({'Name': Newname,'Desc': Newdesc}, todo.Name == Name)
+    todos = db.all()
+    return render_template('index.html', todos=todos)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')

@@ -26,6 +26,13 @@ article {
     padding: 10px;
     overflow: auto;
 }
+footer {
+    text-align: left;
+    background-color: gray;
+    width: 100%;
+    height: 60px;
+    clear: both;
+}
 h2 { 
     text-decoration: underline;
     text-align: center;
@@ -52,13 +59,22 @@ input {
     font-weight: 500;
     font-style: normal;
     color: green;
+    border: solid, 3px, rgb(197, 197, 197);
+    margin-bottom: 5px;
 }
 input:focus {
     outline: none;
+    border: solid, 3px, rgb(85, 85, 85);
     background-color: rgb(197, 197, 197);
   }
 form {
     background-color: gray;
     padding: 10px;
     margin: 5px;
+}
+#silly {
+    margin: auto;
+    background-color: rgb(85,85,85);
+    width: 68px;
+    padding: 10px;
 }
